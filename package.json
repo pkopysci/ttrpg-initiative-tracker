@@ -1,8 +1,8 @@
 {
-  "name": "my-lit-app",
-  "version": "0.1.0",
-  "description": "A starter project using Lit with a dev server for rapid testing",
-  "author": "Your Name <you@example.com>",
+  "name": "ttrpg-initiative-tracker",
+  "version": "1.0.0",
+  "description": "Simple turn tracking card for Home Assistant dashboards.",
+  "author": "Philip Kopyscinski <phil.kopysci@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
