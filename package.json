@@ -1,0 +1,21 @@
+{
+  "name": "my-lit-app",
+  "version": "0.1.0",
+  "description": "A starter project using Lit with a dev server for rapid testing",
+  "author": "Your Name <you@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0"
+  }
+}
