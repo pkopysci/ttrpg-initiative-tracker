@@ -1,7 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 import { cardStyles } from "./styles"
-import { defaultItems } from "./assets/default-items";
 import "./components/mat-icon";
 import "./components/table-row";
 
@@ -12,7 +11,7 @@ export class TtrpgInitiativeTracker extends LitElement {
   @property({ type: Boolean, reflect: true }) darkMode = true;
   @property({ type: String }) title = 'Initiative Order';
   @property({ type: Number }) round = 1;
-  @property({ type: Array }) items: {name:string, roll:number}[] = defaultItems;
+  @property({ type: Array }) items: {name:string, roll:number}[] = [];
   @property({ type: Number }) currentTurn = 0;
 
   @query('#new-name') private nameInput!: HTMLInputElement;
@@ -80,9 +79,6 @@ export class TtrpgInitiativeTracker extends LitElement {
   }
 
   private removeItem = (data: any) => {
-    console.log('removeItem()')
-    console.log(data);
-
     this.items = this.items.filter(x => this.items.indexOf(x) !== data.detail.index);
   }
 
@@ -104,9 +100,6 @@ export class TtrpgInitiativeTracker extends LitElement {
   }
 
   private editItem = (data: any) => {
-
-    console.log('editItem');
-
     let index = data.detail.index;
     let name = data.detail.name;
     let roll = data.detail.roll;
