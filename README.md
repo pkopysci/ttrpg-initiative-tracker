@@ -1,5 +1,5 @@
 # TTRPG Initiative Tracker
-Simple turn tracking card created for running turn-based events during a table-top gaming session. It is intended to be used on a [Home Assistant](https://www.home-assistant.io/) dashboard, but it can also work as a standalone component.
+Simple turn tracking card created for running table-top gaming sessions. It was built to be used on a [Home Assistant](https://www.home-assistant.io/) dashboard for an integrated gaming environment, but it can also work as a standalone web component.
 <img width="1024" height="798" alt="ttrp-tracker-preview" src="https://github.com/user-attachments/assets/a27980b0-12e5-4ea3-9abd-49ac87a3a42e" />
 
 ## Features
@@ -8,7 +8,7 @@ Simple turn tracking card created for running turn-based events during a table-t
 - Track which entry is the active turn
 - forward and reverse turn progression
 - Round tracking
-- Quickly clear the list with the reset button
+- Quickly reset the list to the configuration items
 - light or dark mode can be set in the configuration
 
 ## Home Assistant Configuration

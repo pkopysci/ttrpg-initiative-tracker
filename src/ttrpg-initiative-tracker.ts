@@ -7,6 +7,7 @@ import "./components/table-row";
 @customElement("ttrpg-initiative-tracker")
 export class TtrpgInitiativeTracker extends LitElement {
   private _hass: any;
+  private _defaultItems: {name:string, roll:number}[] = [];
 
   @property({ type: Boolean, reflect: true }) darkMode = true;
   @property({ type: String }) title = 'Initiative Order';
@@ -32,7 +33,8 @@ export class TtrpgInitiativeTracker extends LitElement {
     }
 
     if (config.items) {
-      this.items = config.items.map((item: { name: string, roll: number }) => ({ name: item.name, roll: item.roll, editing: false }));
+      this._defaultItems = config.items.map((item: { name: string, roll: number }) => ({ name: item.name, roll: item.roll }));
+      this.items = [...this._defaultItems];
     }
 
     /**
@@ -54,8 +56,9 @@ export class TtrpgInitiativeTracker extends LitElement {
     .sort((a, b) => { return b.roll - a.roll });
   }
 
-  private clearList = () => {
-    this.items = [];
+  private resetList = () => {
+    this.items = [...this._defaultItems];
+    this.round = 1;
   }
 
   private setPreviousTurn = () => {
@@ -181,7 +184,7 @@ export class TtrpgInitiativeTracker extends LitElement {
               <mat-icon icon="sort"></mat-icon>
               Sort
             </button>
-            <button @click=${this.clearList}>
+            <button @click=${this.resetList}>
               <mat-icon icon="reset"></mat-icon>
               Reset
             </button>
