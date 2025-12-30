@@ -1,6 +1,6 @@
 {
   "name": "ttrpg-initiative-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple turn tracking card for Home Assistant dashboards.",
   "author": "Philip Kopyscinski <phil.kopysci@gmail.com>",
   "license": "MIT",
